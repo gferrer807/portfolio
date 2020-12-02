@@ -31,7 +31,21 @@ function Shortcuts({ openExplorer, openResume }) {
                     className="pointer"
                     name="media_cd"
                 />
-                <div>Media</div>
+                <div>Media.exe</div>
+            </StyledShorcut>
+            <StyledShorcut>
+                <Icon
+                    className="pointer"
+                    name="pbrush_1"
+                />
+                <div>Skills.exe</div>
+            </StyledShorcut>
+            <StyledShorcut>
+                <Icon
+                    className="pointer"
+                    name="bulb"
+                />
+                <div>Helper Agent.exe</div>
             </StyledShorcut>
             <StyledShorcut>
                 <Icon
