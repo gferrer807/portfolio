@@ -1,7 +1,19 @@
-export default class dataForContext {
+export default class DataService {
     _data = {
         projectRepo: "https://github.com/InsafKhamzin/portfolio",
         react95Repo: "https://github.com/React95/React95",
+        socialLinks: [
+            {
+                icon: 'keyboard_mouse',
+                name: 'GitHub',
+                url: 'https://github.com/gferrer807',
+            },
+            {
+                icon: 'keyboard_mouse',
+                name: 'LinkedIn',
+                url: 'https://www.linkedin.com/in/g-ferrer/',
+            },
+        ],
         items: [
             {
                 id: 'about',
@@ -191,6 +203,11 @@ export default class dataForContext {
         return {
             projectRepo: this._data.projectRepo,
             react95Repo: this._data.react95Repo
+        };
+    }
+    getSocialLinks() {
+        return {
+            socialLinks: this._data.socialLinks
         };
     }
 }
