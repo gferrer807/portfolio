@@ -30,7 +30,7 @@ function Taskbar() {
         <TaskBar
             list={
                 <List> 
-                    <List.Item icon="awfext32_6049">
+                    {/* <List.Item icon="awfext32_6049">
                         Change Helper
                         <List>
                             {agents.map((item) => {
@@ -45,7 +45,7 @@ function Taskbar() {
                             })}
                         </List>
                     </List.Item>
-                    <List.Divider/>
+                    <List.Divider/> */}
                     <List.Item icon="awfext32_6049">
                         Contact Me
                         <List>
