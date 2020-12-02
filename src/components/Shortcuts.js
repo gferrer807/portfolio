@@ -50,10 +50,11 @@ function Shortcuts({ openExplorer, openResume }) {
             <StyledShorcut>
                 <Icon
                     className="pointer"
-                    name="dolphin"
+                    name="actmovie_303"
                     onClick={() => openYoutube()}
                 />
-                <div>Learn the secrets...</div>
+                <div>Learn the secrets...</div> 
+                {/* will eventually be dolphin.ico */}
             </StyledShorcut>
         </div>
     )
