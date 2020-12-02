@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import DataContext from '../contexts/dataContext'
 import { TaskBar, List } from '@react95/core'
 import styled from 'styled-components'
@@ -12,12 +12,40 @@ const Link = styled.a`
 function Taskbar() {
     const { projectRepo, react95Repo } = useContext(DataContext).getProjectInfo();
     const { socialLinks } = useContext(DataContext).getSocialLinks();
-    console.log(socialLinks)
+    const { agents } = useContext(DataContext).getAgents();
+    const [newAgent, setNewAgent] = React.useState('Clippy');
+    useContext(DataContext).changeAgent(newAgent);
+
+    const writeNewAgent = (newAgent) => {
+        setNewAgent(newAgent)
+    }
+
+    useEffect(() => {
+        setNewAgent(newAgent);
+    }, []);
+
+    console.log('newAgent - ', useContext(DataContext).getCurrentAgent())
 
     return (
         <TaskBar
             list={
                 <List> 
+                    <List.Item icon="awfext32_6049">
+                        Change Helper
+                        <List>
+                            {agents.map((item) => {
+                                return (
+                                    <List.Item 
+                                        key={item}
+                                        onClick={() => {writeNewAgent(item)}}
+                                    >
+                                        {item}
+                                    </List.Item>
+                                )
+                            })}
+                        </List>
+                    </List.Item>
+                    <List.Divider/>
                     <List.Item icon="awfext32_6049">
                         Contact Me
                         <List>

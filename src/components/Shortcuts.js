@@ -21,10 +21,9 @@ function Shortcuts({ openExplorer }) {
             <StyledShorcut>
                 <Icon
                     className="pointer"
-                    name="windows_explorer"
-                    onClick={() => openExplorer()}
+                    name="notepad"
                 />
-                <div>Explorer</div>
+                <div>resume.txt</div>
             </StyledShorcut>
             <StyledShorcut>
                 <Icon

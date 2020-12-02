@@ -2,6 +2,19 @@ export default class DataService {
     _data = {
         projectRepo: "https://github.com/InsafKhamzin/portfolio",
         react95Repo: "https://github.com/React95/React95",
+        agents: [
+            'Bonzi',
+            'Clippy',
+            'F1',
+            'Genie',
+            'Genius',
+            'Links',
+            'Merlin',
+            'Peedy',
+            'Rocky',
+            'Rover'
+        ],
+        currentAgent: "Clippy",
         socialLinks: [
             {
                 icon: 'keyboard_mouse',
@@ -209,5 +222,18 @@ export default class DataService {
         return {
             socialLinks: this._data.socialLinks
         };
+    }
+    getCurrentAgent() {
+        return {
+            currentAgent: this._data.currentAgent
+        }
+    }
+    getAgents() {
+        return {
+            agents: this._data.agents
+        }
+    }
+    changeAgent(newAgent) {
+        this._data.currentAgent = newAgent;
     }
 }
