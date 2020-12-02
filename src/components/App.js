@@ -3,11 +3,8 @@ import { GlobalStyle, ThemeProvider } from '@react95/core';
 import { createGlobalStyle } from 'styled-components'
 import DataService from '../services/dataService';
 import DataContext from '../contexts/dataContext';
-import soundfile from '../assets/windows95-sound.mp3';
-import Sound from 'react-sound';
-// import useSound from 'react-sound';
-// import windowsStartupSound from '../assets/windows95-sound.mp3'
 import Taskbar from './Taskbar';
+import Shortcuts from './Shortcuts';
 
 const dataService = new DataService();
 
@@ -19,14 +16,11 @@ const BodyFontSizeOverride = createGlobalStyle`
 
 const App = () => {
 
-  //const [play] = useSound(windowsStartupSound);
-
   let loadScreen = () => {
     return new Promise(resolve => setTimeout(resolve, 4000)) // 2 seconds
   };
 
   React.useEffect(() => {
-    //play();
     loadScreen().then(() => {
       const ele = document.getElementById('ipl-progress-indicator')
       if(ele){
@@ -47,13 +41,7 @@ const App = () => {
         <BodyFontSizeOverride />
 
         <Taskbar />
-        {/* <Sound
-          url={soundfile}
-          playStatus={Sound.status.PLAYING}
-          onLoading={this.handleSongLoading}
-          onPlaying={this.handleSongPlaying}
-          onFinishedPlaying={this.handleSongFinishedPlaying}
-        /> */}
+        <Shortcuts />
 
       </ThemeProvider>
     </DataContext.Provider>

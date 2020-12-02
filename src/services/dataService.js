@@ -9,7 +9,7 @@ export default class DataService {
                 url: 'https://github.com/gferrer807',
             },
             {
-                icon: 'keyboard_mouse',
+                icon: 'progman_1',
                 name: 'LinkedIn',
                 url: 'https://www.linkedin.com/in/g-ferrer/',
             },
