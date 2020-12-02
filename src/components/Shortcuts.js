@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Icon } from '@react95/core'
 
@@ -9,10 +9,10 @@ const StyledShorcut = styled.div`
     color: white;
 `;
 
-function Shortcuts({ openExplorer }) {
+function Shortcuts({ openExplorer, openResume }) {
 
     const openYoutube = () => {
-        const url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+        const url = 'https://www.youtube.com/watch?v=OE2NPmqZ9nM';
         window.open(url, "_blank")
     }
 
@@ -22,6 +22,7 @@ function Shortcuts({ openExplorer }) {
                 <Icon
                     className="pointer"
                     name="notepad"
+                    onClick={() => {openResume()}}
                 />
                 <div>resume.txt</div>
             </StyledShorcut>

@@ -5,8 +5,6 @@ import DataService from '../services/dataService';
 import DataContext from '../contexts/dataContext';
 import Desktop from './Desktop';
 import Taskbar from './Taskbar';
-import Shortcuts from './Shortcuts';
-import Clippy from './Clippy';
 
 const dataService = new DataService();
 
@@ -44,8 +42,6 @@ const App = () => {
 
         <Desktop />
         <Taskbar />
-        <Clippy/>
-        <Shortcuts />
 
       </ThemeProvider>
     </DataContext.Provider>

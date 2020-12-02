@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react'
 import DataContext from '../contexts/dataContext'
 import Shortcuts from './Shortcuts';
+import Resume from './programs/Resume'
+import Clippy from './programs/Clippy'
 
 const playlist = [
     {
@@ -11,19 +13,22 @@ const playlist = [
 
 const Desktop = () => {
 
+    const [showResume, setShowResume] = React.useState(false);
+
+    const openResume = () => {
+        setShowResume(!showResume);
+    }
+
     useEffect(
         () => {
-
+            setShowResume(showResume);
         }, []);
-
+        
     return (
         <React.Fragment>
-            {/* <MediaPlayer
-                className="player"
-                playlist={playlist}
-                showVideo
-                fullscreenEnabled
-            /> */}
+            <Shortcuts openResume={openResume}/>
+            {showResume ? <Resume openResume={openResume} showResume={showResume}></Resume> : <></>}
+            <Clippy/>
         </React.Fragment>
     )
 }
