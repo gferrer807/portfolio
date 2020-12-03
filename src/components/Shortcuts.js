@@ -45,7 +45,7 @@ function Shortcuts({ openExplorer, openResume }) {
                     className="pointer"
                     name="bulb"
                 />
-                <div>Helper Agent.exe</div>
+                <div>Test</div>
             </StyledShorcut>
             <StyledShorcut>
                 <Icon
