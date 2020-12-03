@@ -1,10 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Modal, Frame } from '@react95/core'
 import DataContext from '../../contexts/dataContext'
 import ResumeData from './programsData/resumeData'
+import { isMobile } from "react-device-detect";
 
 const Resume = ({openResume, showResume}) => {
     const resumeContent = useContext(DataContext).getItem('resume');
+    const [isMobile, setIsMobile] = React.useState(false);
+
+    useEffect(() => {
+        window.onload()
+    }, [])
     
 
     return (
@@ -14,9 +20,9 @@ const Resume = ({openResume, showResume}) => {
             closeModal={showResume}
             buttons={[{ value: "Close", onClick: () => {openResume()} }]}
             style={{
-                left: '50%',
-                top: '15%',
-                width: 450,
+                left: isMobile ? '3%' : '50%',
+                top: isMobile ? '3%' : '15%',
+                width: isMobile ? '80%' : 450,
             }}
             menu={[
                 { name: 'File', list: [] },
