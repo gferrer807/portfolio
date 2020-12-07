@@ -140,7 +140,7 @@ export default class DataService {
                 name: 'Skills.txt',
                 icon: 'progman_11',
                 content: {
-                    hard: [
+                    skills: [
                         {
                             name: "NodeJS",
                             progress: 100

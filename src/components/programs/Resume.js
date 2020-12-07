@@ -6,18 +6,13 @@ import { isMobile } from "react-device-detect";
 
 const Resume = ({openResume, showResume}) => {
     const resumeContent = useContext(DataContext).getItem('resume');
-    const [isMobile, setIsMobile] = React.useState(false);
-
-    useEffect(() => {
-        window.onload()
-    }, [])
-    
+    const [isMobile, setIsMobile] = React.useState(false);    
 
     return (
         <Modal
             icon="notepad"
             title={`Notepad - resume.txt`}
-            closeModal={showResume}
+            closeModal={() => {openResume()}}
             buttons={[{ value: "Close", onClick: () => {openResume()} }]}
             style={{
                 left: isMobile ? '3%' : '50%',

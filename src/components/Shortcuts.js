@@ -9,7 +9,7 @@ const StyledShorcut = styled.div`
     color: white;
 `;
 
-function Shortcuts({ openExplorer, openResume }) {
+function Shortcuts({ openExplorer, openResume, openSkills }) {
 
     const openYoutube = () => {
         const url = 'https://www.youtube.com/watch?v=OE2NPmqZ9nM';
@@ -37,15 +37,9 @@ function Shortcuts({ openExplorer, openResume }) {
                 <Icon
                     className="pointer"
                     name="pbrush_1"
+                    onClick={() => {openSkills()}}
                 />
                 <div>Skills.exe</div>
-            </StyledShorcut>
-            <StyledShorcut>
-                <Icon
-                    className="pointer"
-                    name="bulb"
-                />
-                <div>Test</div>
             </StyledShorcut>
             <StyledShorcut>
                 <Icon
