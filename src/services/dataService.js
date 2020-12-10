@@ -45,17 +45,18 @@ export default class DataService {
                 name: 'Resume.txt',
                 icon: 'notepad_2',
                 content: {
-                    resumeLink:"https://docs.google.com/document/d/1XG2Ty9vF8Z1KCESC9O3CS_EUK-DDX3cgIdjYmi8NH3U/export?format=pdf",
+                    resumeLink:"https://docs.google.com/document/d/1hyee78324bQXQ3r_M6hXw4L56cTpsjAMqJaEkzrUmBk/export?format=pdf",
                     workExperience: [
                         {
-                            jobTitle: "Founder/Engineer",
-                            company: "Casa Kota",
+                            jobTitle: "Software Engineer",
+                            company: "Shay Consulting",
                             location: "New York",
-                            period: "Jan 2018 - Present",
+                            period: "Oct 2018 - Present",
                             accomplishments: [
-                                "Worked on applications for clients using multiple technologies but mainly (React, MySQL, Node, Express)",
-                                "Developed smaller websites for local businesses using Wordpress with Cloudways",
-                                "Assisted businesses with revenue growth using digital marketing tactics and email marketing"
+                                "Built an excel-like reusable table library for custom client needs with native CSS / React components",
+                                "Created a testing infrastructure for 3 clients to automate their CICD pipeline and reduce post-bug deployments by 30%",
+                                "Ran queue jobs and integrated with twilio api in order to build a custom in-house server system",
+                                "Communicate with Product Owners, UX Designers, Project Managers, and C-Level employees to achieve successful delivery of client products"
                             ]
                         },
                         {
@@ -72,32 +73,9 @@ export default class DataService {
                         },
                         {
                             jobTitle: "Software Engineer",
-                            company: "Fluent",
-                            location: "New York",
-                            period: "August 2019 - November 2019",
-                            accomplishments: [
-                                "Built a scalable API with Node, MySQL, Elasticsearch, AWS Lambdas, and Elastic Beanstalk that could process ~20 million requests per day at ~185ms",
-                                "Created scrapers using selenium and Python to obtain reporting data from 3rd party providers",
-                                "Implemented various AWS lambdas for data ingestion process as well as search service in both Node and Python",
-                                "Constructed a management tool for the search service using React"
-                            ]
-                        },
-                        {
-                            jobTitle: "Software Engineering Immersive Resident",
-                            company: "Hack Reactor",
-                            location: "New York",
-                            period: "March 2019 - May 2019",
-                            accomplishments: [
-                                "Teach Jr. Engineers full stack technologies such as Javascript, React, Node, PostgreSQL, MySQL, Redis, AWS, Docker and Webpack",
-                                "Provide 1:1 mentorship through whiteboarding, technical troubleshooting, assessments, and career counseling",
-                                "In charge of onboarding documentation for new hires"
-                            ]
-                        },
-                        {
-                            jobTitle: "Software Engineer",
                             company: "Panoptic",
                             location: "New York",
-                            period: "Jun 2018 - Dec 2018",
+                            period: "Jun 2018 - Nov 2018",
                             accomplishments: [
                                 "Deploy Alexa skills using conversational focused interface design",
                                 "Develop conversational architecture and flow to optimize user experience",
